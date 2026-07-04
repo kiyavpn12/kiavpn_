@@ -1,4 +1,4 @@
-# 🚀 ARG Panel v9.2
+چ# 🚀 ARG Panel v9.2
 
 **یک پنل مدیریت کانفیگ‌های VLESS با قابلیت‌های پیشرفته و رابط کاربری مدرن**
 
@@ -80,14 +80,6 @@
 - **سابسکریپشن کامل** از همه کانفیگ‌ها
 - **صفحه پابلیک** برای نمایش به کاربران عادی
 - **API کامل** برای تمام عملیات‌ها
-
----
-
-## 📸 پیش‌نمایش
-
-![Login Page](https://via.placeholder.com/800x400?text=Login+Page)
-![Dashboard](https://via.placeholder.com/800x400?text=Dashboard)
-![Configs](https://via.placeholder.com/800x400?text=Configs)
 
 ---
 
