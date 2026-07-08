@@ -19,11 +19,11 @@ import httpx
 import logging
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
-logger = logging.getLogger("ARG-Gateway")
+logger = logging.getLogger("KIA VPN")
 
 IRAN_TZ = ZoneInfo("Asia/Tehran")
 
-app = FastAPI(title="ARG Gateway", docs_url=None, redoc_url=None)
+app = FastAPI(title="KIA VPN", docs_url=None, redoc_url=None)
 
 CONFIG = {
     "port": int(os.environ.get("PORT", 8000)),
@@ -112,7 +112,7 @@ SESSION_TTL = 60 * 60 * 24 * 7
 def hash_password(pw: str) -> str:
     return hashlib.sha256(f"{pw}{CONFIG['secret']}".encode()).hexdigest()
 
-AUTH = {"password_hash": hash_password(os.environ.get("ADMIN_PASSWORD", "123456"))}
+AUTH = {"password_hash": hash_password(os.environ.get("ADMIN_PASSWORD", "KIA VPN"))}
 SESSIONS: dict = {}
 SESSIONS_LOCK = asyncio.Lock()
 
@@ -157,7 +157,7 @@ async def startup():
     )
     await load_state()
     log_activity("system", "سرور راه‌اندازی شد", "ok")
-    logger.info(f"ARG Gateway v9.2 started on port {CONFIG['port']}")
+    logger.info(f"نهش رحد v9.2 started on port {CONFIG['port']}")
 
 @app.on_event("shutdown")
 async def shutdown():
@@ -320,7 +320,7 @@ async def ensure_default_link():
 # ── Basic endpoints ───────────────────────────────────────────────────────────
 @app.get("/")
 async def root():
-    return {"service": "ARG Gateway", "version": "9.2", "status": "active"}
+    return {"service": "KIA VPN", "version": "9.2", "status": "active"}
 
 @app.get("/health")
 async def health():
@@ -673,7 +673,7 @@ async def create_link(request: Request, _=Depends(require_auth)):
         "uuid": uid,
         **LINKS[uid],
         "expired": False,
-        "vless_link": generate_vless_link(uid, host, remark=f"ARG-{label}", protocol=protocol, fingerprint=fingerprint),
+        "vless_link": generate_vless_link(uid, host, remark=f"KIA VPN-{label}", protocol=protocol, fingerprint=fingerprint),
         "sub_url": f"https://{host}/sub/{uid}",
     }
 
