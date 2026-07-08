@@ -54,7 +54,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charse
         <div style="font-size:13px;font-weight:700;color:var(--t1);margin-bottom:4px">عضویت در گروه پشتیبانی</div>
         <div style="font-size:11px;color:var(--t3);line-height:1.7">برای دریافت آخرین اخبار، راهنمایی و پشتیبانی، به گروه تلگرامی ما بپیوندید.</div>
       </div>
-      <a href="https://t.me/+QyEVU0FquFczYjQ0" target="_blank" rel="noopener" style="text-decoration:none">
+      <a href="https://https://t.me/Kiavpn12" target="_blank" rel="noopener" style="text-decoration:none">
         <button class="btn btn-p" style="display:flex;align-items:center;gap:8px;padding:12px 24px;font-size:13px;border-radius:12px;background:linear-gradient(135deg,#0098e6,#0077bb);color:#fff;border:none;cursor:pointer;font-family:inherit;font-weight:700;box-shadow:0 6px 18px rgba(0,152,230,0.35);transition:all .3s ease;white-space:nowrap">
           <i class="ti ti-brand-telegram"></i> عضویت در گروه
         </button>
